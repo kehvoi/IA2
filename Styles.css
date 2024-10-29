@@ -1,0 +1,35 @@
+@font-face {font-family: 'LeagueSpartan'; src: url('/Assets/Fonts/LeagueSpartan-Bold.otf') format('opentype');}
+@font-face {font-family: 'sofachrome'; src: url('/Assets/Fonts/sofachrome\ rg.otf') format('opentype');}
+@font-face {font-family: 'Preussische'; src: url('/Assets/Fonts/PreussischeVI9Ag2.ttf') format('opentype')}
+body{background-color: whitesmoke; display: flex; flex-direction: column; min-height: 100vh; margin: 0; padding: 0; width: 100%; height: 100};
+.Shots{object-fit: cover;}
+.logo{width: 5%; height: auto; object-fit: cover;} 
+header{ background-color: #333; color: #fff; padding: 0.1rem; text-align: center;}
+nav{background-color: black;}
+nav ul {list-style-type: none; padding: 0.1rem; background-color: black; display: flex; justify-content: center; flex-wrap: wrap;}  
+nav ul li a {text-decoration: none; color: #333; padding: 0.5rem 1rem; border-radius: 5px; background-color: #ddd; margin: 0.5rem; font-family:LeagueSpartan;}
+nav ul li a:hover { background-color: #bbb;}
+h1{font-family: sofachrome;}
+h2{font-family:LeagueSpartan;}
+footer{ background-color: #333; color: #fff; text-align: center; padding: 1rem; margin-top: auto; }
+.submit{background-color: black; color: whitesmoke;}
+.lf{display: flex; flex-direction: column; background-color: white; border-radius: 10px; padding: 3rem; margin: auto; width: min-content; align-items: center; justify-content: center;  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.8);}
+.lf label{font-family:LeagueSpartan; font-size: small;} 
+.lf input{padding-right: 3rem;}
+.lf button{font-family:LeagueSpartan;}
+.row{display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-right:0.625rem;margin-left: 0.625rem; margin-top: 0.7rem; margin-bottom: 1.7rem;} 
+.item{background-color: white; padding: 1rem; border-radius: 0.9rem; box-shadow: 0 2px 5px rgba(0,0,0,0.1); font-family: Helvetica; }
+.Displayimg{width: 100%; height: auto; object-fit: cover;}
+.centerH{text-align: center; font-family:sofachrome;}
+.price{font-family: Helvetica; color: lime;}
+.loginBg{background-image: url(/Assets/Images/pexels-chama-214531-691901.jpg); background-repeat: no-repeat; background-size: auto; background-position: center;}
+.checkout{background-color: orange; padding: 0.5rem 1rem; border-radius: 5px; margin: 0.5rem; font-family:LeagueSpartan; width: min-content;}
+.cancel{background-color: red; padding: 0.5rem 1rem; border-radius: 5px;  margin: 0.5rem; font-family:LeagueSpartan; width: min-content;}
+.exit{background-color: black; padding: 0.5rem 1rem; border-radius: 5px; color: white; margin: 0.5rem; font-family:LeagueSpartan;width: min-content;}
+.iItem{font-family:LeagueSpartan; padding-top: 0.7rem;}
+.total{font-family:LeagueSpartan; padding-top: 0.7rem;}
+.lf1{display: flex; flex-direction: column; background-color: white; border-radius: 10px; padding: 4rem; margin: auto; width: 16rem; align-items: center; justify-content: center;  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.8);}
+.lfh{font-family: LeagueSpartan;}
+.con{display: flex; justify-content: center; flex-wrap: wrap; padding: 0.1rem;}
+.au{ background-color: white; color: black; text-align: center; padding: 1rem; margin-top: auto; }
+.vOverlay{position: absolute; top: 70%; left: 50%; color: white; font-size: 4rem; z-index: 1; font-family:Preussische; text-align: center;}

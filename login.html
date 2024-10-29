@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DroneFusion - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Styles.css" rel="stylesheet">
+</head>
+<body class="loginBg">
+    <header>
+        <h1>DroneFusion</h1>
+    </header>
+    <nav >
+        <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="products.html">Products</a></li>
+        </ul>
+    </nav>
+
+<div>
+<H2>Login</H2>
+<div class="lf">
+    <form action="login.html" method="post" id="login">
+        <legend>Login</legend>
+        <label>Username: </label><input type="text" name="username" id="username" required>
+        <br>
+        <label>Password: </label><input type="password" name="password" id="password" required>
+        <br>
+        <input type="submit" class="submit" name="submit">
+    </form>
+</div>
+</div>
+<footer>
+    <p>&copy; 2024 DroneFusion. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+<script>
+const lUsername = "Kehvoi";
+const lPassword = "Drone4lyfe";
+let mTries = 3;
+const loginForm = document.getElementById('login');
+loginForm.addEventListener('submit', function(event) {
+event.preventDefault();
+const username = document.getElementById("username").value;
+const password = document.getElementById("password").value;
+
+if(!username || !password){
+    alert("Incorrect, try again");
+    return;
+}
+if(mTries <= 0){
+    alert("Please try again later");
+    window.location.href = "error.html";
+    return;
+}
+if(username === lUsername && password === lPassword){
+    alert("Login Successful");
+    alert("Redirecting...");
+    window.location.href = "products.html";
+}
+else{mTries--;
+    if(mTries === 0) {
+        alert("Incorrect Please try again later... Redirecting to error page...");
+         window.location.href = "error.html";
+    }
+    else{alert("Incorrect Username or Password. ${mTries} left.");}
+    }
+});
+</script>

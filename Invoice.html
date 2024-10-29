@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DroneFusion - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Styles.css" rel="stylesheet">
+</head>
+<body class="loginBg">
+<header>
+    <h1>DroneFusion</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="products.html">Products</a></li>
+    </ul>
+</nav>
+<div class="lf1">
+    <label class="lfh">Invoice</label>
+ <!-- This div will hold the selected items -->
+ <div id="invoice-items" class="iItem"></div>
+
+ <!-- This is where the total will be displayed -->
+ <h3 class="lfh">Total: <span id="total" class="total"></span></h3>
+</div>
+<div class="con">
+<input type="button" value="Checkout" name="checkout" class="checkout"><input type="button" value="Cancel" name="cancel" class="cancel"><input type="button" value="Exit" name="exit" class="exit">
+</div>
+<section class="au">
+    <h1>About Us</h1>
+    <p>Name: Kehvoi Thompson<br>
+    ID:2304224<br>
+    Email: Kehvoithompson@gmail.com<br>
+    Module Code: CIT2011<br>
+    Assignment Name: Individual Assignment #2<br>
+    Class Time: Tuesdays 11 AM</p>
+
+    </section>
+<footer>
+    <p>&copy; 2024 DroneFusion. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+<script>
+    // Retrieve item names and prices from local storage
+    const itemNames = localStorage.getItem('itemNames');
+    const itemPrices = localStorage.getItem('itemPrices');
+
+    // Check if there are any selected items
+    if (itemNames && itemPrices) {
+        // Split the strings into arrays using the semicolon as a separator
+        const namesArray = itemNames.split(';');
+        const pricesArray = itemPrices.split(';');
+
+        // Remove the last empty item (because the string ends with a semicolon)
+        namesArray.pop();
+        pricesArray.pop();
+
+        // Get the invoice div to display the items
+        const invoiceDiv = document.getElementById('invoice-items');
+        let total = 0;
+
+        // Loop through the arrays and display each item
+        for (let i = 0; i < namesArray.length; i++) {
+            // Create a div for each item and display its name and price
+            const itemDiv = document.createElement('div');
+            itemDiv.textContent = namesArray[i] + ': ' + pricesArray[i];
+            invoiceDiv.appendChild(itemDiv);
+
+            // Add the item price to the total
+            total += parseFloat(pricesArray[i].replace('$', ''));
+        }
+        
+        // Display the total
+        document.getElementById('total').textContent = '$' + total;
+    } else {
+        // If no items were selected, show a message
+        document.getElementById('invoice-items').textContent = "No items selected.";
+    }
+    </script>
+
+
